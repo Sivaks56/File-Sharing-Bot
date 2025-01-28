@@ -11,7 +11,7 @@ load_dotenv()
 TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
 
 #Your API ID from my.telegram.org
-APP_ID = int(os.environ.get("APP_ID", "26238389"))
+APP_ID = int(os.environ.get("APP_ID", ""))
 
 #Your API Hash from my.telegram.org
 API_HASH = os.environ.get("API_HASH", "")
@@ -26,7 +26,7 @@ OWNER_ID = int(os.environ.get("OWNER_ID", ""))
 PORT = os.environ.get("PORT", "8080")
 
 #Database 
-DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://karthikstarz777:karthikstarz777@cluster2.vkaew.mongodb.net/?retryWrites=true&w=majority&appName=Cluster2")
+DB_URI = os.environ.get("DATABASE_URL", "")
 DB_NAME = os.environ.get("DATABASE_NAME", "Madysharexbot")
 
 #force sub channel id, if you want enable force sub
@@ -39,7 +39,7 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 START_PIC = os.environ.get("START_PIC","")
 START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
 try:
-    ADMINS=[1429119149]
+    ADMINS=[]
     for x in (os.environ.get("ADMINS", "1429119149").split()):
         ADMINS.append(int(x))
 except ValueError:
